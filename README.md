@@ -6,8 +6,7 @@ A comprehensive educational capstone project demonstrating full-stack developmen
 
 | Module | Type | Live Demo |
 |--------|------|-----------|
-| **Website** | HTML/CSS/JS | [https://username.github.io/future-mall-capstone/](https://username.github.io/future-mall-capstone/) |
-| **Digital Awareness** | HTML/CSS/JS | [https://username.github.io/future-mall-capstone/digital-awareness/](https://username.github.io/future-mall-capstone/digital-awareness/) |
+| **Website** | HTML/CSS/JS | [https://future-mall.com](https://765yrty3267uyrty-lgtm.github.io/Future-Mall/#modules) |
 
 ## 📦 Project Structure
 
