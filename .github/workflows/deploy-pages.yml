@@ -40,13 +40,15 @@ jobs:
 
       - name: Assemble Pages site
         run: |
-          mkdir -p _site/digital-awareness _site/branding
+          mkdir -p _site/digital-awareness _site/branding _site/shared
           # Main website at the site root
           cp -R website/. _site/
           # Digital awareness under /digital-awareness/
           cp -R digital_awareness/. _site/digital-awareness/
           # Brand assets (referenced by the website's brand section)
           cp -R branding/. _site/branding/
+          # Shared constants (CSS variables imported by website styles)
+          cp -R shared/. _site/shared/
           cp LICENSE _site/LICENSE
 
       - name: Upload artifact
