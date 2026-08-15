@@ -1,34 +1,165 @@
+# Future Mall - Git Ignore
+
 # Python
 __pycache__/
 *.py[cod]
-.pytest_cache/
-.mypy_cache/
-.ruff_cache/
-.coverage
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Unit test / coverage
 htmlcov/
-.venv/
+.coverage
+.coverage.*
+coverage.xml
+*.cover
+.pytest_cache/
+.tox/
+nox/
+.hypothesis/
+
+# Virtual environments
 venv/
 env/
+ENV/
+.venv
+env.bak/
+venv.bak/
 
-# Database (attendance system)
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+*.pyc
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Database
 *.db
 *.sqlite
 *.sqlite3
+*.db-journal
+
+# Attendance System Data
+python_modules/attendance_system/data/*.db
+python_modules/attendance_system/data/*.sqlite
+python_modules/attendance_system/data/*.sqlite3
+python_modules/attendance_system/models/data/*.db
+python_modules/attendance_system/models/data/*.sqlite
+python_modules/attendance_system/models/data/*.sqlite3
+
+# Environment
+.env
+.env.local
+.env.*.local
 
 # Node
 node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.pnpm-debug.log*
 
-# IDE / OS
-.vscode/
-.idea/
-Thumbs.db
-Desktop.ini
-.DS_Store
+# Build outputs
+dist/
+build/
+out/
+.next/
+.nuxt/
 
-# Logs / temp
-*.log
+# Test coverage
+coverage/
+.nyc_output/
+
+# Misc
+*.pem
+.vercel
+.netlify
+
+# Temporary files
 *.tmp
+*.temp
+temp/
 
-# Secrets
-.env
-.env.*
+# Editor backup files
+*~
+*.bak
+*.orig
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Python package
+*.egg
+*.egg-info
+dist/
+build/
+.eggs/
+pip-wheel-metadata/
+
+# Jupyter
+.ipynb_checkpoints
+
+# PyTest
+.pytest_cache/
+
+# MyPy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Ruff
+.ruff_cache/
+
+# Black
+.blitz_cache/
+
+# Pre-commit
+.pre-commit-config.yaml
+
+# Local development
+.local/
+.idea/
+.vscode/
+*.code-workspace

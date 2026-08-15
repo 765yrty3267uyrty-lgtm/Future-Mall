@@ -27,27 +27,27 @@ jobs:
           node-version: '20'
 
       - name: Install website dependencies
-        if: hashFiles('future-mall-capstone/website/package-lock.json') != ''
+        if: hashFiles('website/package-lock.json') != ''
         run: |
-          cd future-mall-capstone/website
+          cd website
           npm ci
 
       - name: Install digital awareness dependencies
-        if: hashFiles('future-mall-capstone/digital_awareness/package-lock.json') != ''
+        if: hashFiles('digital_awareness/package-lock.json') != ''
         run: |
-          cd future-mall-capstone/digital_awareness
+          cd digital_awareness
           npm ci
 
       - name: Assemble Pages site
         run: |
           mkdir -p _site/digital-awareness _site/branding
           # Main website at the site root
-          cp -R future-mall-capstone/website/. _site/
+          cp -R website/. _site/
           # Digital awareness under /digital-awareness/
-          cp -R future-mall-capstone/digital_awareness/. _site/digital-awareness/
+          cp -R digital_awareness/. _site/digital-awareness/
           # Brand assets (referenced by the website's brand section)
-          cp -R future-mall-capstone/branding/. _site/branding/
-          cp future-mall-capstone/LICENSE _site/LICENSE
+          cp -R branding/. _site/branding/
+          cp LICENSE _site/LICENSE
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
