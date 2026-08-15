@@ -9,6 +9,9 @@ document.addEventListener('DOMContentLoaded', () => {
   initSmoothScroll();
   initIntersectionObserver();
   initInteractiveFeatures();
+  initScrollProgress();
+  initBackToTop();
+  initYear();
 });
 
 // Navigation
@@ -176,6 +179,52 @@ function initInteractiveFeatures() {
     el.addEventListener('focusout', () => {
       el.style.transform = '';
     });
+  });
+}
+
+// Scroll Progress Bar
+function initScrollProgress() {
+  const progressBar = document.querySelector('.scroll-progress span');
+  if (!progressBar) return;
+
+  let ticking = false;
+  function update() {
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    progressBar.style.width = progress + '%';
+    ticking = false;
+  }
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(update);
+      ticking = true;
+    }
+  }, { passive: true });
+  update();
+}
+
+// Back to Top Button
+function initBackToTop() {
+  const btn = document.querySelector('.back-to-top');
+  if (!btn) return;
+
+  function onScroll() {
+    const visible = window.scrollY > 500;
+    btn.classList.toggle('visible', visible);
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  btn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
+
+// Dynamic year
+function initYear() {
+  document.querySelectorAll('[data-year]').forEach(el => {
+    el.textContent = new Date().getFullYear();
   });
 }
 
