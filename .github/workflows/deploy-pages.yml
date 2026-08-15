@@ -41,19 +41,12 @@ jobs:
       - name: Assemble Pages site
         run: |
           mkdir -p _site/digital-awareness _site/branding
-          # Main website at the site root
-          cp -R website/. _site/
-          # Inline shared constants into the website stylesheet so no relative
-          # @import path can escape the /Future-Mall/ site prefix on Pages
-          cat shared/constants.css > _site/style.css
-          echo "" >> _site/style.css
-          grep -v '^@import' website/style.css >> _site/style.css
+          # Inline CSS + JS into index.html (no external style/script files)
+          python3 scripts/inline_site.py _site/index.html
+          # Remaining website assets (images, favicon) at the site root
+          cp -R website/assets _site/
           # Digital awareness under /digital-awareness/
           cp -R digital_awareness/. _site/digital-awareness/
-          # Inline shared constants for digital awareness too
-          cat shared/constants.css > _site/digital-awareness/style.css
-          echo "" >> _site/digital-awareness/style.css
-          grep -v '^@import' digital_awareness/style.css >> _site/digital-awareness/style.css
           # Brand assets (referenced by the website's brand section)
           cp -R branding/. _site/branding/
           cp LICENSE _site/LICENSE
