@@ -40,15 +40,22 @@ jobs:
 
       - name: Assemble Pages site
         run: |
-          mkdir -p _site/digital-awareness _site/branding _site/shared
+          mkdir -p _site/digital-awareness _site/branding
           # Main website at the site root
           cp -R website/. _site/
+          # Inline shared constants into the website stylesheet so no relative
+          # @import path can escape the /Future-Mall/ site prefix on Pages
+          cat shared/constants.css > _site/style.css
+          echo "" >> _site/style.css
+          grep -v '^@import' website/style.css >> _site/style.css
           # Digital awareness under /digital-awareness/
           cp -R digital_awareness/. _site/digital-awareness/
+          # Inline shared constants for digital awareness too
+          cat shared/constants.css > _site/digital-awareness/style.css
+          echo "" >> _site/digital-awareness/style.css
+          grep -v '^@import' digital_awareness/style.css >> _site/digital-awareness/style.css
           # Brand assets (referenced by the website's brand section)
           cp -R branding/. _site/branding/
-          # Shared constants (CSS variables imported by website styles)
-          cp -R shared/. _site/shared/
           cp LICENSE _site/LICENSE
 
       - name: Upload artifact
