@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Cyber Threat Library - Learn about major cyber threats and how to protect yourself">
+  <title>Cyber Threat Library | Digital Awareness</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <header class="header" role="banner">
+    <div class="container header-inner">
+      <a href="index.html" class="logo" aria-label="Digital Awareness Home">
+        <svg class="logo-icon" viewBox="0 0 80 50" fill="none" aria-hidden="true">
+          <rect x="8" y="10" width="64" height="35" stroke="currentColor" stroke-width="1.5" rx="2"/>
+          <rect x="35" y="28" width="10" height="17" stroke="currentColor" stroke-width="1.5"/>
+          <line x1="40" y1="28" x2="40" y2="45" stroke="currentColor" stroke-width="1" stroke-dasharray="2 2"/>
+          <rect x="14" y="16" width="8" height="8" stroke="currentColor" stroke-width="1"/>
+          <rect x="14" y="27" width="8" height="8" stroke="currentColor" stroke-width="1"/>
+          <rect x="25" y="16" width="8" height="8" stroke="currentColor" stroke-width="1"/>
+          <rect x="25" y="27" width="8" height="8" stroke="currentColor" stroke-width="1"/>
+          <rect x="47" y="16" width="8" height="8" stroke="currentColor" stroke-width="1"/>
+          <rect x="47" y="27" width="8" height="8" stroke="currentColor" stroke-width="1"/>
+          <rect x="58" y="16" width="8" height="8" stroke="currentColor" stroke-width="1"/>
+          <rect x="58" y="27" width="8" height="8" stroke="currentColor" stroke-width="1"/>
+          <line x1="5" y1="10" x2="75" y2="10" stroke="currentColor" stroke-width="1.5"/>
+          <line x1="40" y1="5" x2="40" y2="10" stroke="currentColor" stroke-width="1"/>
+          <polygon points="40,5 50,8 40,11" fill="currentColor"/>
+        </svg>
+        <span class="logo-text">Digital Awareness</span>
+      </a>
+
+      <nav class="nav" role="navigation" aria-label="Main navigation">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="threats.html" class="nav-link active">Threats</a></li>
+          <li><a href="password.html" class="nav-link">Password Checker</a></li>
+          <li><a href="quiz.html" class="nav-link">Quiz</a></li>
+          <li><a href="posters.html" class="nav-link">Posters</a></li>
+        </ul>
+        <button class="mobile-menu-btn" aria-label="Toggle menu" aria-expanded="false">
+          <span class="hamburger"></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" role="main">
+    <!-- Page Header -->
+    <section class="page-header" aria-labelledby="page-title">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li aria-current="page">Cyber Threat Library</li>
+          </ol>
+        </nav>
+        <h1 id="page-title" class="page-title">Cyber Threat Library</h1>
+        <p class="page-subtitle">Understand the 8 major cyber threats and how to protect yourself</p>
+      </div>
+    </section>
+
+    <!-- Threat Categories -->
+    <section class="section" aria-labelledby="threats-title">
+      <div class="container">
+        <header class="section-header">
+          <h2 id="threats-title" class="section-title">Major Cyber Threats</h2>
+          <p class="section-subtitle">Click on any threat to learn more about how it works and how to protect yourself</p>
+        </header>
+
+        <div class="threats-grid">
+          <!-- Threat 1: Phishing -->
+          <article class="threat-card" data-threat="phishing">
+            <div class="threat-header">
+              <div class="threat-icon" aria-hidden="true">🎣</div>
+              <div>
+                <h3 class="threat-title">Phishing</h3>
+                <span class="threat-severity high">High Risk</span>
+              </div>
+            </div>
+            <p class="threat-description">Fraudulent attempts to obtain sensitive information by disguising as a trustworthy entity in electronic communications.</p>
+            <div class="threat-details">
+              <h4>Common Examples:</h4>
+              <ul>
+                <li>Fake bank emails asking to "verify" account</li>
+                <li>Fake login pages for popular services</li>
+                <li>SMS/text messages with malicious links (smishing)</li>
+                <li>Voice calls pretending to be tech support (vishing)</li>
+              </ul>
+              <h4>Warning Signs:</h4>
+              <ul>
+                <li>Urgent or threatening language</li>
+                <li>Generic greetings ("Dear Customer")</li>
+                <li>Poor grammar, spelling, or formatting</li>
+                <li>Requests for personal/financial information</li>
+                <li>Suspicious sender addresses</li>
+              </ul>
+              <h4>Prevention:</h4>
+              <ul>
+                <li>Verify sender through official channels</li>
+                <li>Don't click links in unexpected emails</li>
+                <li>Hover over links to check real destination</li>
+                <li>Enable 2FA on all accounts</li>
+                <li>Report phishing to your IT/security team</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Threat 2: Malware -->
+          <article class="threat-card" data-threat="malware">
+            <div class="threat-header">
+              <div class="threat-icon" aria-hidden="true">🦠</div>
+              <div>
+                <h3 class="threat-title">Malware</h3>
+                <span class="threat-severity high">High Risk</span>
+              </div>
+            </div>
+            <p class="threat-description">Malicious software designed to disrupt, damage, or gain unauthorized access to computer systems.</p>
+            <div class="threat-details">
+              <h4>Types:</h4>
+              <ul>
+                <li>Trojans - Disguised as legitimate software</li>
+                <li>Worms - Self-replicating network spreaders</li>
+                <li>Rootkits - Hide deep in system</li>
+                <li>Keyloggers - Record keystrokes</li>
+              </ul>
+              <h4>Warning Signs:</h4>
+              <ul>
+                <li>Slow system performance</li>
+                <li>Unexpected pop-ups or ads</li>
+                <li>Programs opening/closing automatically</li>
+                <li>Browser redirects</li>
+                <li>Disabled antivirus</li>
+              </ul>
+              <h4>Prevention:</h4>
+              <ul>
+                <li>Keep OS and software updated</li>
+                <li>Use reputable antivirus/anti-malware</li>
+                <li>Don't download from untrusted sources</li>
+                <li>Be cautious with email attachments</li>
+                <li>Use standard user account (not admin)</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Threat 3: Viruses -->
+          <article class="threat-card" data-threat="viruses">
+            <div class="threat-header">
+              <div class="threat-icon" aria-hidden="true">🦠</div>
+              <div>
+                <h3 class="threat-title">Viruses</h3>
+                <span class="threat-severity high">High Risk</span>
+              </div>
+            </div>
+            <p class="threat-description">Self-replicating malicious code that attaches to legitimate programs and spreads when executed.</p>
+            <div class="threat-details">
+              <h4>Characteristics:</h4>
+              <ul>
+                <li>Requires host program to execute</li>
+                <li>Replicates by modifying other files</li>
+                <li>Can corrupt or delete data</li>
+                <li>Spreads via infected files/media</li>
+              </ul>
+              <h4>Warning Signs:</h4>
+              <ul>
+                <li>Files changing size unexpectedly</li>
+                <li>Programs taking longer to start</li>
+                <li>Unexplained disk activity</li>
+                <li>System crashes or freezes</li>
+              </ul>
+              <h4>Prevention:</h4>
+              <ul>
+                <li>Real-time antivirus protection</li>
+                <li>Scan downloads before opening</li>
+                <li>Don't run unknown executables</li>
+                <li>Keep backups of important data</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Threat 4: Ransomware -->
+          <article class="threat-card" data-threat="ransomware">
+            <div class="threat-header">
+              <div class="threat-icon" aria-hidden="true">💰</div>
+              <div>
+                <h3 class="threat-title">Ransomware</h3>
+                <span class="threat-severity critical">Critical Risk</span>
+              </div>
+            </div>
+            <p class="threat-description">Malware that encrypts files and demands payment (ransom) for decryption key.</p>
+            <div class="threat-details">
+              <h4>How it works:</h4>
+              <ul>
+                <li>Encrypts files with strong encryption</li>
+                <li>Displays ransom note with payment instructions</li>
+                <li>Often demands cryptocurrency payment</li>
+                <li>May threaten to leak data (double extortion)</li>
+              </ul>
+              <h4>Warning Signs:</h4>
+              <ul>
+                <li>Files with new extensions (.encrypted, .locked)</li>
+                <li>Ransom notes on desktop or in folders</li>
+                <li>Unable to open previously accessible files</li>
+                <li>Desktop wallpaper changed to ransom note</li>
+              </ul>
+              <h4>Prevention:</h4>
+              <ul>
+                <li>Regular offline backups (3-2-1 rule)</li>
+                <li>Email attachment scanning</li>
+                <li>Network segmentation</li>
+                <li>Patch management</li>
+                <li>User training on phishing</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Threat 5: Spyware -->
+          <article class="threat-card" data-threat="spyware">
+            <div class="threat-header">
+              <div class="threat-icon" aria-hidden="true">👁️</div>
+              <div>
+                <h3 class="threat-title">Spyware</h3>
+                <span class="threat-severity high">High Risk</span>
+              </div>
+            </div>
+            <p class="threat-description">Software that secretly monitors user activity and collects personal information without consent.</p>
+            <div class="threat-details">
+              <h4>What it steals:</h4>
+              <ul>
+                <li>Keystrokes (passwords, messages)</li>
+                <li>Browsing history and habits</li>
+                <li>Personal files and documents</li>
+                <li>Webcam/microphone access</li>
+                <li>Location data</li>
+              </ul>
+              <h4>Warning Signs:</h4>
+              <ul>
+                <li>Unexplained data usage</li>
+                <li>Battery draining quickly</li>
+                <li>Webcam light on unexpectedly</li>
+                <li>Strange apps installed</li>
+              </ul>
+              <h4>Prevention:</h4>
+              <ul>
+                <li>Anti-spyware software</li>
+                <li>Review app permissions regularly</li>
+                <li>Cover webcam when not in use</li>
+                <li>Don't install unknown apps</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Threat 6: Identity Theft -->
+          <article class="threat-card" data-threat="identity-theft">
+            <div class="threat-header">
+              <div class="threat-icon" aria-hidden="true">🆔</div>
+              <div>
+                <h3 class="threat-title">Identity Theft</h3>
+                <span class="threat-severity critical">Critical Risk</span>
+              </div>
+            </div>
+            <p class="threat-description">Fraudulent use of someone's personal information for financial gain or other crimes.</p>
+            <div class="threat-details">
+              <h4>Methods:</h4>
+              <ul>
+                <li>Data breaches exposing personal info</li>
+                <li>Phishing for SSN, DOB, addresses</li>
+                <li>Dumpster diving for documents</li>
+                <li>Social media oversharing</li>
+              </ul>
+              <h4>Warning Signs:</h4>
+              <ul>
+                <li>Unfamiliar charges on statements</li>
+                <li>Credit report changes</li>
+                <li>Denied credit applications</li>
+                <li>IRS notices about unknown income</li>
+              </ul>
+              <h4>Prevention:</h4>
+              <ul>
+                <li>Monitor credit reports regularly</li>
+                <li>Freeze credit when not needed</li>
+                <li>Shred sensitive documents</li>
+                <li>Limit personal info sharing online</li>
+                <li>Use identity theft protection services</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Threat 7: Data Breaches -->
+          <article class="threat-card" data-threat="data-breaches">
+            <div class="threat-header">
+              <div class="threat-icon" aria-hidden="true">📊</div>
+              <div>
+                <h3 class="threat-title">Data Breaches</h3>
+                <span class="threat-severity high">High Risk</span>
+              </div>
+            </div>
+            <p class="threat-description">Unauthorized access to confidential data, often exposing personal information of millions of users.</p>
+            <div class="threat-details">
+              <h4>Causes:</h4>
+              <ul>
+                <li>Weak security configurations</li>
+                <li>Unpatched vulnerabilities</li>
+                <li>Insider threats</li>
+                <li>Third-party vendor compromises</li>
+              </ul>
+              <h4>Impact:</h4>
+              <ul>
+                <li>Exposed passwords, emails, PII</li>
+                <li>Financial fraud and identity theft</li>
+                <li>Reputational damage to organizations</li>
+                <li>Legal and regulatory penalties</li>
+              </ul>
+              <h4>Protection:</h4>
+              <ul>
+                <li>Use unique passwords per site</li>
+                <li>Enable breach monitoring (HaveIBeenPwned)</li>
+                <li>Change passwords immediately after breach</li>
+                <li>Use password managers</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Threat 8: Social Engineering -->
+          <article class="threat-card" data-threat="social-engineering">
+            <div class="threat-header">
+              <div class="threat-icon" aria-hidden="true">🎭</div>
+              <div>
+                <h3 class="threat-title">Social Engineering</h3>
+                <span class="threat-severity high">High Risk</span>
+              </div>
+            </div>
+            <p class="threat-description">Psychological manipulation to trick people into revealing confidential information or performing actions.</p>
+            <div class="threat-details">
+              <h4>Techniques:</h4>
+              <ul>
+                <li>Pretexting - Fabricated scenario to gain trust</li>
+                <li>Baiting - Enticing with false promises</li>
+                <li>Tailgating - Following authorized person into restricted area</li>
+                <li>Quid pro quo - Offering service for information</li>
+              </ul>
+              <h4>Warning Signs:</h4>
+              <ul>
+                <li>Unsolicited requests for sensitive info</li>
+                <li>Pressure to act quickly</li>
+                <li>Too-good-to-be-true offers</li>
+                <li>Requests to bypass security procedures</li>
+              </ul>
+              <h4>Prevention:</h4>
+              <ul>
+                <li>Verify identity through independent channels</li>
+                <li>Follow security protocols strictly</li>
+                <li>Report suspicious interactions</li>
+                <li>Regular security awareness training</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quick Reference Table -->
+    <section class="section section-alt" aria-labelledby="summary-title">
+      <div class="container">
+        <header class="section-header">
+          <h2 id="summary-title" class="section-title">Threat Summary</h2>
+          <p class="section-subtitle">Quick reference for threat severity and key defenses</p>
+        </header>
+
+        <div class="table-container">
+          <table class="threat-summary-table">
+            <thead>
+              <tr>
+                <th>Threat</th>
+                <th>Severity</th>
+                <th>Primary Target</th>
+                <th>Key Defense</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Phishing</td>
+                <td><span class="severity-badge high">High</span></td>
+                <td>Credentials, Financial Info</td>
+                <td>Verify sender, 2FA, Hover links</td>
+              </tr>
+              <tr>
+                <td>Malware</td>
+                <td><span class="severity-badge high">High</span></td>
+                <td>System Integrity, Data</td>
+                <td>Antivirus, Updates, Caution</td>
+              </tr>
+              <tr>
+                <td>Viruses</td>
+                <td><span class="severity-badge high">High</span></td>
+                <td>Files, System</td>
+                <td>Antivirus, Backups, Caution</td>
+              </tr>
+              <tr>
+                <td>Ransomware</td>
+                <td><span class="severity-badge critical">Critical</span></td>
+                <td>Files, Operations</td>
+                <td>Offline Backups, Email Security</td>
+              </tr>
+              <tr>
+                <td>Spyware</td>
+                <td><span class="severity-badge high">High</span></td>
+                <td>Privacy, Credentials</td>
+                <td>Anti-spyware, Permissions</td>
+              </tr>
+              <tr>
+                <td>Identity Theft</td>
+                <td><span class="severity-badge critical">Critical</span></td>
+                <td>Personal Identity, Finances</td>
+                <td>Credit Monitoring, Privacy</td>
+              </tr>
+              <tr>
+                <td>Data Breaches</td>
+                <td><span class="severity-badge high">High</span></td>
+                <td>Exposed Personal Data</td>
+                <td>Unique Passwords, Monitoring</td>
+              </tr>
+              <tr>
+                <td>Social Engineering</td>
+                <td><span class="severity-badge high">High</span></td>
+                <td>Human Psychology</td>
+                <td>Verification, Training, Protocols</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Protection Checklist -->
+    <section class="section" aria-labelledby="checklist-title">
+      <div class="container">
+        <header class="section-header">
+          <h2 id="checklist-title" class="section-title">Universal Protection Checklist</h2>
+          <p class="section-subtitle">Apply these practices to defend against all threats</p>
+        </header>
+
+        <div class="checklist-grid">
+          <div class="checklist-category">
+            <h3>🔐 Account Security</h3>
+            <ul class="checklist">
+              <li>Use unique 12+ character passwords for each account</li>
+              <li>Enable 2FA/MFA on all important accounts</li>
+              <li>Use a reputable password manager</li>
+              <li>Monitor for data breaches (HaveIBeenPwned)</li>
+              <li>Set up account recovery options</li>
+            </ul>
+          </div>
+
+          <div class="checklist-category">
+            <h3>💻 Device Security</h3>
+            <ul class="checklist">
+              <li>Enable automatic OS and software updates</li>
+              <li>Install reputable antivirus/anti-malware</li>
+              <li>Enable firewall</li>
+              <li>Encrypt device storage (BitLocker/FileVault)</li>
+              <li>Use standard user account (not admin)</li>
+            </ul>
+          </div>
+
+          <div class="checklist-category">
+            <h3>🌐 Network & Browsing</h3>
+            <ul class="checklist">
+              <li>Use HTTPS everywhere (HTTPS Everywhere extension)</li>
+              <li>Avoid public Wi-Fi for sensitive activities (use VPN)</li>
+              <li>Verify URLs before entering credentials</li>
+              <li>Clear browser data regularly</li>
+              <li>Use ad/tracker blocker</li>
+            </ul>
+          </div>
+
+          <div class="checklist-category">
+            <h3>📧 Email & Communication</h3>
+            <ul class="checklist">
+              <li>Verify sender before clicking links</li>
+              <li>Don't open unexpected attachments</li>
+              <li>Report phishing to IT/security team</li>
+              <li>Use separate email for sensitive accounts</li>
+              <li>Be wary of urgent/threatening language</li>
+            </ul>
+          </div>
+
+          <div class="checklist-category">
+            <h3>💾 Data Protection</h3>
+            <ul class="checklist">
+              <li>Follow 3-2-1 backup rule</li>
+              <li>Test backup restores quarterly</li>
+              <li>Encrypt sensitive files</li>
+              <li>Shred physical documents</li>
+              <li>Limit personal info sharing online</li>
+            </ul>
+          </div>
+
+          <div class="checklist-category">
+            <h3>🛡️ Awareness & Habits</h3>
+            <ul class="checklist">
+              <li>Stay informed about current threats</li>
+              <li>Complete security awareness training</li>
+              <li>Report suspicious activity immediately</li>
+              <li>Question urgent/unusual requests</li>
+              <li>Teach family/friends basic security</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section" aria-labelledby="cta-title">
+      <div class="container">
+        <div class="cta-card">
+          <h2 id="cta-title" class="cta-title">Test Your Knowledge</h2>
+          <p class="cta-text">Take the phishing identification quiz to see how well you can spot real-world threats.</p>
+          <div class="cta-actions">
+            <a href="quiz.html" class="btn btn-primary btn-large">Take Phishing Quiz →</a>
+            <a href="password.html" class="btn btn-secondary btn-large">Check Password Strength</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <a href="index.html" class="logo" aria-label="Digital Awareness Home">
+            <svg class="logo-icon" viewBox="0 0 80 50" fill="none" aria-hidden="true">
+              <rect x="8" y="10" width="64" height="35" stroke="currentColor" stroke-width="1.5" rx="2"/>
+              <rect x="35" y="28" width="10" height="17" stroke="currentColor" stroke-width="1.5"/>
+              <line x1="40" y1="28" x2="40" y2="45" stroke="currentColor" stroke-width="1" stroke-dasharray="2 2"/>
+              <rect x="14" y="16" width="8" height="8" stroke="currentColor" stroke-width="1"/>
+              <rect x="14" y="27" width="8" height="8" stroke="currentColor" stroke-width="1"/>
+              <rect x="25" y="16" width="8" height="8" stroke="currentColor" stroke-width="1"/>
+              <rect x="25" y="27" width="8" height="8" stroke="currentColor" stroke-width="1"/>
+              <rect x="47" y="16" width="8" height="8" stroke="currentColor" stroke-width="1"/>
+              <rect x="47" y="27" width="8" height="8" stroke="currentColor" stroke-width="1"/>
+              <rect x="58" y="16" width="8" height="8" stroke="currentColor" stroke-width="1"/>
+              <rect x="58" y="27" width="8" height="8" stroke="currentColor" stroke-width="1"/>
+              <line x1="5" y1="10" x2="75" y2="10" stroke="currentColor" stroke-width="1.5"/>
+              <line x1="40" y1="5" x2="40" y2="10" stroke="currentColor" stroke-width="1"/>
+              <polygon points="40,5 50,8 40,11" fill="currentColor"/>
+            </svg>
+            <span class="logo-text">Digital Awareness</span>
+          </a>
+          <p class="footer-tagline">Part of Future Mall Capstone Project</p>
+        </div>
+
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <a href="index.html">Home</a>
+          <a href="threats.html">Threats</a>
+          <a href="password.html">Password Checker</a>
+          <a href="quiz.html">Quiz</a>
+          <a href="posters.html">Posters</a>
+        </nav>
+
+        <p class="footer-copyright">
+          © 2025 Future Mall Capstone Project. Educational use only.
+        </p>
+      </div>
+    </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

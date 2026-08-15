@@ -1,0 +1,4 @@
+[wokwi]
+version: 1
+firmware: src/main.py
+board: esp32-devkit-v1

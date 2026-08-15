@@ -1,0 +1,45 @@
+Smart Garage Gate - Truth Table
+================================
+Project: Future Mall - Task 5 (ESP32 + MicroPython, Wokwi)
+
+Legend:
+  C   = car count (0..15)
+  IN  = IN button pressed   (1 = pressed)
+  OUT = OUT button pressed  (1 = pressed)
+  green  LED = free space available (C < 15)
+  red    LED = garage FULL (C = 15)
+  yellow LED = a car is ENTERING (blinks on IN)
+  blue   LED = a car is EXITING  (blinks on OUT)
+
+--- Free-space / status LEDs (steady state) -------------------------------
+
+  C        | free?  | green | red   | meaning
+  ---------+--------+-------+-------+------------------------
+  0        | yes    | ON    | OFF   | empty garage
+  1 .. 14  | yes    | ON    | OFF   | parking available
+  15       | no     | OFF   | ON    | FULL - reject entry
+
+--- Buttons (one-shot actions) -------------------------------------------
+
+  IN  | OUT | action                    | count | yellow | blue
+  ----+-----+---------------------------+-------+--------+-----
+  0   | 0   | none                      | same  | OFF    | OFF
+  1   | 0   | car ENTERS (if C < 15)    | +1    | flash  | OFF
+  1   | 0   | car ENTERS (if C = 15)    | same  | OFF    | OFF  (FULL -> reject, red flash)
+  0   | 1   | car EXITS (if C > 0)      | -1    | OFF    | flash
+  0   | 1   | car EXITS (if C = 0)      | same  | OFF    | OFF  (empty -> nothing to exit)
+  1   | 1   | both pressed              | same  | n/a    | n/a  (debounced, one action max)
+
+--- Complete example run (starting at C = 0) -------------------------------
+  Step | event  | C (before->after) | green | red | yellow | blue
+  -----+--------+-------------------+-------+-----+--------+-----
+  1    | IN     | 0 -> 1            | ON    | OFF | flash  | OFF
+  2    | IN     | 1 -> 2            | ON    | OFF | flash  | OFF
+  ...  | IN x13 | 2 -> 15           | OFF   | ON  | flash  | OFF
+  3    | IN     | 15 -> 15 (FULL)   | OFF   | ON  | OFF    | OFF   (rejected)
+  4    | OUT    | 15 -> 14          | ON    | OFF | OFF    | flash
+  5    | OUT    | 1 -> 0            | ON    | OFF | OFF    | flash
+  6    | OUT    | 0 -> 0 (EMPTY)    | ON    | OFF | OFF    | OFF   (nothing to exit)
+
+Note: flows/truth follow a Moore-style state machine - the LED state is a pure
+function of the current counter value (plus transient blink pulses for entry/exit).

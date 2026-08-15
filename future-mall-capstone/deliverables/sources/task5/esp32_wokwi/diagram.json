@@ -1,0 +1,108 @@
+{
+  "version": 1,
+  "author": "Future Mall - Smart Garage Gate",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-esp32-devkit-v1",
+      "id": "esp",
+      "top": 0,
+      "left": 0,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led-green",
+      "top": 30,
+      "left": 300,
+      "attrs": { "color": "green" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led-red",
+      "top": 30,
+      "left": 380,
+      "attrs": { "color": "red" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led-yellow",
+      "top": 130,
+      "left": 300,
+      "attrs": { "color": "yellow" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led-blue",
+      "top": 130,
+      "left": 380,
+      "attrs": { "color": "blue" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn-in",
+      "top": 260,
+      "left": 300,
+      "attrs": { "color": "green" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn-out",
+      "top": 260,
+      "left": 380,
+      "attrs": { "color": "blue" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r-g",
+      "top": 60,
+      "left": 250,
+      "attrs": { "resistance": "220" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r-r",
+      "top": 60,
+      "left": 330,
+      "attrs": { "resistance": "220" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r-y",
+      "top": 160,
+      "left": 250,
+      "attrs": { "resistance": "220" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r-b",
+      "top": 160,
+      "left": 330,
+      "attrs": { "resistance": "220" }
+    }
+  ],
+  "connections": [
+    ["esp:13", "led-green:A", "green", []],
+    ["led-green:C", "r-g:1", "green", []],
+    ["r-g:2", "esp:GND.1", "green", []],
+
+    ["esp:14", "led-red:A", "red", []],
+    ["led-red:C", "r-r:1", "red", []],
+    ["r-r:2", "esp:GND.1", "red", []],
+
+    ["esp:26", "led-yellow:A", "yellow", []],
+    ["led-yellow:C", "r-y:1", "yellow", []],
+    ["r-y:2", "esp:GND.1", "yellow", []],
+
+    ["esp:27", "led-blue:A", "blue", []],
+    ["led-blue:C", "r-b:1", "blue", []],
+    ["r-b:2", "esp:GND.1", "blue", []],
+
+    ["esp:16", "btn-in:1.l", "green", []],
+    ["btn-in:1.r", "esp:GND.1", "green", []],
+
+    ["esp:17", "btn-out:1.l", "blue", []],
+    ["btn-out:1.r", "esp:GND.1", "blue", []]
+  ],
+  "dependencies": {}
+}

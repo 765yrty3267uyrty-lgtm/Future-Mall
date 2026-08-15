@@ -1,0 +1,41 @@
+<svg width="1080" height="1080" viewBox="0 0 1080 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1080" height="1080" fill="#0F172A"/>
+  <defs>
+    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="50%" stop-color="#1E3A5F"/>
+      <stop offset="100%" stop-color="#2563EB"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#gradient)"/>
+
+  <circle cx="880" cy="150" r="200" fill="#2563EB" opacity="0.1"/>
+  <circle cx="950" cy="950" r="300" fill="#0D9488" opacity="0.08"/>
+
+  <text x="540" y="300" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="64" font-weight="700" fill="white">Future Mall</text>
+  <text x="540" y="370" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="22" fill="#93C5FD">Shopping for Tomorrow</text>
+
+  <rect x="200" y="420" width="680" height="400" rx="24" fill="white" opacity="0.1" stroke="#2563EB" stroke-width="2"/>
+  <rect x="220" y="450" width="640" height="340" rx="16" fill="#DBEAFE" stroke="#93C5FD" stroke-width="1.5"/>
+  <rect x="250" y="480" width="580" height="60" rx="12" fill="white" stroke="#93C5FD" stroke-width="1"/>
+  <rect x="250" y="560" width="350" height="24" rx="8" fill="white" stroke="#E2E8F0" stroke-width="1"/>
+  <rect x="250" y="600" width="500" height="24" rx="8" fill="white" stroke="#E2E8F0" stroke-width="1"/>
+  <rect x="250" y="640" width="250" height="24" rx="8" fill="white" stroke="#E2E8F0" stroke-width="1"/>
+  <rect x="250" y="700" width="300" height="48" rx="14" fill="#2563EB"/>
+  <text x="540" y="730" text-anchor="middle" font-family="Inter, sans-serif" font-size="20" font-weight="600" fill="white">Check In</text>
+
+  <circle cx="950" cy="300" r="60" fill="#2563EB" opacity="0.2"/>
+  <circle cx="950" cy="300" r="38" fill="#2563EB" opacity="0.3"/>
+  <text x="950" y="310" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="32" font-weight="700" fill="white">⏰</text>
+
+  <circle cx="950" cy="400" r="60" fill="#10B981" opacity="0.2"/>
+  <circle cx="950" cy="400" r="38" fill="#10B981" opacity="0.3"/>
+  <text x="950" y="410" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="32" font-weight="700" fill="white">🏁</text>
+
+  <text x="540" y="880" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="24" font-weight="600" fill="white">Complete simple tasks. Earn real rewards. Shop smarter.</text>
+
+  <rect x="390" y="940" width="300" height="50" rx="10" fill="#2563EB"/>
+  <text x="540" y="972" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="18" font-weight="600" fill="white">Start Earning Today →</text>
+
+  <text x="540" y="1030" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" fill="#64748B">futuremall.app  |  @FutureMallBot  |  #FutureMall</text>
+</svg>

@@ -1,0 +1,30 @@
+{
+  "name": "future-mall-digital-awareness",
+  "version": "1.0.0",
+  "description": "Digital Awareness - Interactive Cybersecurity Education Platform",
+  "private": true,
+  "scripts": {
+    "dev": "npx serve .",
+    "test": "echo \"No tests specified\" && exit 0",
+    "lint": "npx stylelint style.css"
+  },
+  "keywords": [
+    "future-mall",
+    "capstone",
+    "cybersecurity",
+    "education",
+    "digital-awareness"
+  ],
+  "author": "Future Mall Team",
+  "license": "MIT",
+  "devDependencies": {
+    "serve": "^14.2.0",
+    "stylelint": "^16.0.0",
+    "stylelint-config-standard": "^36.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}

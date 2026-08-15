@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Digital Awareness - Learn cybersecurity fundamentals and safe internet practices">
+  <title>Digital Awareness | Future Mall</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <header class="header" role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="Digital Awareness Home">
+        <svg class="logo-icon" viewBox="0 0 80 50" fill="none" aria-hidden="true">
+          <rect x="8" y="10" width="64" height="35" stroke="currentColor" stroke-width="1.5" rx="2"/>
+          <rect x="35" y="28" width="10" height="17" stroke="currentColor" stroke-width="1.5"/>
+          <line x1="40" y1="28" x2="40" y2="45" stroke="currentColor" stroke-width="1" stroke-dasharray="2 2"/>
+          <rect x="14" y="16" width="8" height="8" stroke="currentColor" stroke-width="1"/>
+          <rect x="14" y="27" width="8" height="8" stroke="currentColor" stroke-width="1"/>
+          <rect x="25" y="16" width="8" height="8" stroke="currentColor" stroke-width="1"/>
+          <rect x="25" y="27" width="8" height="8" stroke="currentColor" stroke-width="1"/>
+          <rect x="47" y="16" width="8" height="8" stroke="currentColor" stroke-width="1"/>
+          <rect x="47" y="27" width="8" height="8" stroke="currentColor" stroke-width="1"/>
+          <rect x="58" y="16" width="8" height="8" stroke="currentColor" stroke-width="1"/>
+          <rect x="58" y="27" width="8" height="8" stroke="currentColor" stroke-width="1"/>
+          <line x1="5" y1="10" x2="75" y2="10" stroke="currentColor" stroke-width="1.5"/>
+          <line x1="40" y1="5" x2="40" y2="10" stroke="currentColor" stroke-width="1"/>
+          <polygon points="40,5 50,8 40,11" fill="currentColor"/>
+        </svg>
+        <span class="logo-text">Digital Awareness</span>
+      </a>
+
+      <nav class="nav" role="navigation" aria-label="Main navigation">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link active">Home</a></li>
+          <li><a href="threats.html" class="nav-link">Threats</a></li>
+          <li><a href="password.html" class="nav-link">Password Checker</a></li>
+          <li><a href="quiz.html" class="nav-link">Quiz</a></li>
+          <li><a href="posters.html" class="nav-link">Posters</a></li>
+        </ul>
+        <button class="mobile-menu-btn" aria-label="Toggle menu" aria-expanded="false">
+          <span class="hamburger"></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" role="main">
+    <!-- Hero Section -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-text">
+            <span class="hero-badge">🛡️ Digital Awareness Platform</span>
+            <h1 id="hero-title" class="hero-title">Stay Safe Online</h1>
+            <p class="hero-tagline">Learn cybersecurity fundamentals and protect your digital life</p>
+            <p class="hero-description">
+              Interactive lessons, real-time password strength checker, phishing identification quiz,
+              and downloadable safety posters. Built for beginners, designed for everyone.
+            </p>
+            <div class="hero-actions">
+              <a href="password.html" class="btn btn-primary">Check Password Strength</a>
+              <a href="quiz.html" class="btn btn-secondary">Take Phishing Quiz</a>
+            </div>
+          </div>
+          <div class="hero-visual">
+            <div class="hero-stats" aria-hidden="true">
+              <div class="stat-item">
+                <span class="stat-number">8</span>
+                <span class="stat-label">Threat Categories</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">15</span>
+                <span class="stat-label">Quiz Questions</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">6</span>
+                <span class="stat-label">Safety Posters</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">∞</span>
+                <span class="stat-label">Free Access</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Learning Modules -->
+    <section class="section" aria-labelledby="modules-title">
+      <div class="container">
+        <header class="section-header">
+          <h2 id="modules-title" class="section-title">Learning Modules</h2>
+          <p class="section-subtitle">Explore interactive cybersecurity education</p>
+        </header>
+
+        <div class="modules-grid">
+          <article class="module-card large" data-module="password">
+            <div class="module-header">
+              <div class="module-icon" aria-hidden="true">🔐</div>
+              <div>
+                <h3 class="module-title">Password Strength Checker</h3>
+                <p class="module-description">Real-time password analysis with entropy calculation, strength meter, and personalized improvement suggestions.</p>
+              </div>
+            </div>
+            <ul class="module-features">
+              <li>Entropy-based strength calculation</li>
+              <li>Visual strength meter (Weak → Very Strong)</li>
+              <li>Character requirement checklist</li>
+              <li>Improvement suggestions</li>
+              <li>Common pattern detection</li>
+            </ul>
+            <div class="module-actions">
+              <a href="password.html" class="btn btn-primary">Try Password Checker →</a>
+            </div>
+          </article>
+
+          <article class="module-card large" data-module="quiz">
+            <div class="module-header">
+              <div class="module-icon" aria-hidden="true">🎯</div>
+              <div>
+                <h3 class="module-title">Phishing Identification Quiz</h3>
+                <p class="module-description">Test your ability to spot phishing emails with 15 realistic scenarios. Immediate feedback with detailed explanations.</p>
+              </div>
+            </div>
+            <ul class="module-features">
+              <li>15 realistic phishing scenarios</li>
+              <li>Immediate feedback with explanations</li>
+              <li>Score tracking & performance breakdown</li>
+              <li>Retry with shuffled questions</li>
+              <li>Shareable results badge</li>
+            </ul>
+            <div class="module-actions">
+              <a href="quiz.html" class="btn btn-primary">Start Quiz →</a>
+            </div>
+          </article>
+
+          <article class="module-card" data-module="threats">
+            <div class="module-header">
+              <div class="module-icon" aria-hidden="true">🛡️</div>
+              <div>
+                <h3 class="module-title">Cyber Threat Library</h3>
+                <p class="module-description">Comprehensive guide to 8 major cyber threats with real-world examples, warning signs, and prevention strategies.</p>
+              </div>
+            </div>
+            <ul class="module-features">
+              <li>Phishing & Social Engineering</li>
+              <li>Malware, Viruses & Ransomware</li>
+              <li>Spyware & Identity Theft</li>
+              <li>Data Breaches</li>
+              <li>Warning signs & prevention for each</li>
+            </ul>
+            <div class="module-actions">
+              <a href="threats.html" class="btn btn-outline">Explore Threats →</a>
+            </div>
+          </article>
+
+          <article class="module-card" data-module="posters">
+            <div class="module-header">
+              <div class="module-icon" aria-hidden="true">📋</div>
+              <div>
+                <h3 class="module-title">Safety Posters</h3>
+                <p class="module-description">Downloadable awareness posters for home, office, or classroom. High-resolution PDFs ready to print.</p>
+              </div>
+            </div>
+            <ul class="module-features">
+              <li>Think Before You Click</li>
+              <li>Protect Your Password</li>
+              <li>Stay Safe Online</li>
+              <li>Verify Before You Trust</li>
+              <li>Privacy Matters</li>
+              <li>Keep Software Updated</li>
+            </ul>
+            <div class="module-actions">
+              <a href="posters.html" class="btn btn-outline">Download Posters →</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quick Tips -->
+    <section class="section section-alt" aria-labelledby="tips-title">
+      <div class="container">
+        <header class="section-header">
+          <h2 id="tips-title" class="section-title">Essential Cybersecurity Tips</h2>
+          <p class="section-subtitle">Quick reference for daily digital safety</p>
+        </header>
+
+        <div class="tips-grid">
+          <article class="tip-card">
+            <div class="tip-icon" aria-hidden="true">🔑</div>
+            <h3>Strong Passwords</h3>
+            <p>Use 12+ characters with mixed case, numbers, and symbols. Never reuse passwords across sites.</p>
+          </article>
+
+          <article class="tip-card">
+            <div class="tip-icon" aria-hidden="true">🔐</div>
+            <h3>Enable 2FA/MFA</h3>
+            <p>Enable multi-factor authentication on all important accounts. Use authenticator apps, not SMS.</p>
+          </article>
+
+          <article class="tip-card">
+            <div class="tip-icon" aria-hidden="true">🔗</div>
+            <h3>Verify URLs</h3>
+            <p>Hover over links before clicking. Check for HTTPS and correct domain spelling.</p>
+          </article>
+
+          <article class="tip-card">
+            <div class="tip-icon" aria-hidden="true">📧</div>
+            <h3>Email Caution</h3>
+            <p>Don't open attachments from unknown senders. Verify urgent requests through another channel.</p>
+          </article>
+
+          <article class="tip-card">
+            <div class="tip-icon" aria-hidden="true">🔄</div>
+            <h3>Keep Updated</h3>
+            <p>Enable automatic updates for OS, browser, and apps. Security patches protect against exploits.</p>
+          </article>
+
+          <article class="tip-card">
+            <div class="tip-icon" aria-hidden="true">💾</div>
+            <h3>Backup Data</h3>
+            <p>Follow 3-2-1 rule: 3 copies, 2 different media, 1 offsite. Test restores regularly.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section" aria-labelledby="cta-title">
+      <div class="container">
+        <div class="cta-card">
+          <h2 id="cta-title" class="cta-title">Ready to Level Up Your Digital Safety?</h2>
+          <p class="cta-text">Start with the password checker or phishing quiz. Track your progress and share your achievements.</p>
+          <div class="cta-actions">
+            <a href="password.html" class="btn btn-primary btn-large">Check My Password</a>
+            <a href="quiz.html" class="btn btn-secondary btn-large">Take The Quiz</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <a href="index.html" class="logo" aria-label="Digital Awareness Home">
+            <svg class="logo-icon" viewBox="0 0 80 50" fill="none" aria-hidden="true">
+              <rect x="8" y="10" width="64" height="35" stroke="currentColor" stroke-width="1.5" rx="2"/>
+              <rect x="35" y="28" width="10" height="17" stroke="currentColor" stroke-width="1.5"/>
+              <line x1="40" y1="28" x2="40" y2="45" stroke="currentColor" stroke-width="1" stroke-dasharray="2 2"/>
+              <rect x="14" y="16" width="8" height="8" stroke="currentColor" stroke-width="1"/>
+              <rect x="14" y="27" width="8" height="8" stroke="currentColor" stroke-width="1"/>
+              <rect x="25" y="16" width="8" height="8" stroke="currentColor" stroke-width="1"/>
+              <rect x="25" y="27" width="8" height="8" stroke="currentColor" stroke-width="1"/>
+              <rect x="47" y="16" width="8" height="8" stroke="currentColor" stroke-width="1"/>
+              <rect x="47" y="27" width="8" height="8" stroke="currentColor" stroke-width="1"/>
+              <rect x="58" y="16" width="8" height="8" stroke="currentColor" stroke-width="1"/>
+              <rect x="58" y="27" width="8" height="8" stroke="currentColor" stroke-width="1"/>
+              <line x1="5" y1="10" x2="75" y2="10" stroke="currentColor" stroke-width="1.5"/>
+              <line x1="40" y1="5" x2="40" y2="10" stroke="currentColor" stroke-width="1"/>
+              <polygon points="40,5 50,8 40,11" fill="currentColor"/>
+            </svg>
+            <span class="logo-text">Digital Awareness</span>
+          </a>
+          <p class="footer-tagline">Part of Future Mall Capstone Project</p>
+        </div>
+
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <a href="index.html">Home</a>
+          <a href="threats.html">Threats</a>
+          <a href="password.html">Password Checker</a>
+          <a href="quiz.html">Quiz</a>
+          <a href="posters.html">Posters</a>
+        </nav>
+
+        <p class="footer-copyright">
+          © 2025 Future Mall Capstone Project. Educational use only.
+        </p>
+      </div>
+    </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

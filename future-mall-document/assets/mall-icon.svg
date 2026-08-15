@@ -1,0 +1,22 @@
+<svg width="80" height="50" viewBox="0 0 80 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Main building -->
+  <rect x="8" y="10" width="64" height="35" stroke="#3b82f6" stroke-width="1.5" rx="2"/>
+  <!-- Entrance -->
+  <rect x="35" y="28" width="10" height="17" stroke="#3b82f6" stroke-width="1.5"/>
+  <line x1="40" y1="28" x2="40" y2="45" stroke="#3b82f6" stroke-width="1" stroke-dasharray="2 2"/>
+  <!-- Windows left -->
+  <rect x="14" y="16" width="8" height="8" stroke="#3b82f6" stroke-width="1"/>
+  <rect x="14" y="27" width="8" height="8" stroke="#3b82f6" stroke-width="1"/>
+  <rect x="25" y="16" width="8" height="8" stroke="#3b82f6" stroke-width="1"/>
+  <rect x="25" y="27" width="8" height="8" stroke="#3b82f6" stroke-width="1"/>
+  <!-- Windows right -->
+  <rect x="47" y="16" width="8" height="8" stroke="#3b82f6" stroke-width="1"/>
+  <rect x="47" y="27" width="8" height="8" stroke="#3b82f6" stroke-width="1"/>
+  <rect x="58" y="16" width="8" height="8" stroke="#3b82f6" stroke-width="1"/>
+  <rect x="58" y="27" width="8" height="8" stroke="#3b82f6" stroke-width="1"/>
+  <!-- Roof line -->
+  <line x1="5" y1="10" x2="75" y2="10" stroke="#3b82f6" stroke-width="1.5"/>
+  <!-- Small flag -->
+  <line x1="40" y1="5" x2="40" y2="10" stroke="#3b82f6" stroke-width="1"/>
+  <polygon points="40,5 50,8 40,11" fill="#3b82f6"/>
+</svg>

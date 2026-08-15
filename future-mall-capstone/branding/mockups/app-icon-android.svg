@@ -1,0 +1,19 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="512" height="512" fill="#2563EB" rx="80"/>
+  <g transform="translate(64, 128)">
+    <rect x="0" y="0" width="384" height="256" stroke="white" stroke-width="10" rx="20"/>
+    <rect x="224" y="192" width="40" height="141" stroke="white" stroke-width="10"/>
+    <line x1="244" y1="192" x2="244" y2="333" stroke="white" stroke-width="8" stroke-dasharray="10 10"/>
+    <rect x="96" y="128" width="64" height="64" stroke="white" stroke-width="8"/>
+    <rect x="96" y="208" width="64" height="64" stroke="white" stroke-width="8"/>
+    <rect x="176" y="128" width="64" height="64" stroke="white" stroke-width="8"/>
+    <rect x="176" y="208" width="64" height="64" stroke="white" stroke-width="8"/>
+    <rect x="304" y="128" width="64" height="64" stroke="white" stroke-width="8"/>
+    <rect x="304" y="208" width="64" height="64" stroke="white" stroke-width="8"/>
+    <rect x="384" y="128" width="64" height="64" stroke="white" stroke-width="8"/>
+    <rect x="384" y="208" width="64" height="64" stroke="white" stroke-width="8"/>
+    <line x1="32" y1="0" x2="480" y2="0" stroke="white" stroke-width="10"/>
+    <line x1="244" y1="-40" x2="244" y2="0" stroke="white" stroke-width="8"/>
+    <polygon points="244,-40 304,-8 244,24" fill="white"/>
+  </g>
+</svg>

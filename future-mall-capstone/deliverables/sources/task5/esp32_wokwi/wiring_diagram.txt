@@ -1,0 +1,51 @@
+Smart Garage Gate - Wiring Diagram (text)
+==========================================
+Project: Future Mall - Task 5 (ESP32 + MicroPython, Wokwi)
+Board  : ESP32 DevKit V1  |  Firmware: src/main.py
+
+Component connections
+---------------------
+  COMPONENT        PIN    -> ESP32 PIN   NOTES
+  ---------------  -----  -----------    -------------------------------------
+  LED (green)      anode  GPIO13         free space available (C < 15)
+  LED (red)        anode  GPIO14         garage FULL (C = 15)
+  LED (yellow)     anode  GPIO26         car ENTERING (blink)
+  LED (blue)       anode  GPIO27         car EXITING (blink)
+
+  Each LED cathode -> 220 ohm resistor -> GND.
+
+  IN button        pin A -> GPIO16       press = car enters (internal PULL-UP)
+  OUT button       pin A -> GPIO17       press = car exits  (internal PULL-UP)
+  Button other pin -> GND                button reads LOW when pressed
+
+ASCII circuit sketch
+---------------------
+
+                     ESP32 DEVKIT V1
+     +------------------------------------------------------+
+     | GND o---o---+                                      3V3|
+     |             |                                          |
+     | GPIO13 o----+----[res 220]----|>|----o  GREEN LED
+     | GPIO14 o----+----[res 220]----|>|----o  RED LED
+     | GPIO26 o----+----[res 220]----|>|----o  YELLOW LED
+     | GPIO27 o----+----[res 220]----|>|----o  BLUE LED
+     |                              (led arrow = anode)
+     | GPIO16 o----------------------o  IN PB
+     | GPIO17 o----------------------o  OUT PB
+     +------------------------------------------------------+
+                    |                      |          |
+                  GND o-------------------o          |
+                    GND o-----------------------------+ (LEDs)
+                    GND o----------------o-------------+ (buttons)
+
+    o = connection point
+    [res 220] = 220 ohm current-limiting resistor
+    IN PB / OUT PB = push buttons (wire the free terminal of each button to GND)
+
+Key behaviour summary
+---------------------
+  * IN pressed  -> count +1 (max 15), yellow flashes, red off if space left
+  * OUT pressed -> count -1 (min 0),  blue flashes
+  * green ON while count < 15 ; red ON only when count == 15
+
+See also: diagram.json (Wokwi), wokwi.toml, truth_table.txt

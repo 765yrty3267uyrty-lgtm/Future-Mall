@@ -1,0 +1,21 @@
+# Future Mall - Attendance System Requirements
+# Core
+tkinter-tooltip>=2.1.0
+
+# Database
+# sqlite3 is built-in
+
+# Excel export (optional)
+openpyxl>=3.1.0
+
+# PDF export (optional)
+reportlab>=4.0.0
+
+# Development
+pytest>=7.0.0
+black>=23.0.0
+flake8>=6.0.0
+mypy>=1.0.0
+
+# Packaging
+pyinstaller>=6.0.0

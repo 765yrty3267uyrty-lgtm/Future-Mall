@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Phishing Identification Quiz - Test your ability to spot phishing emails">
+  <title>Phishing Quiz | Digital Awareness</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <header class="header" role="banner">
+    <div class="container header-inner">
+      <a href="index.html" class="logo" aria-label="Digital Awareness Home">
+        <svg class="logo-icon" viewBox="0 0 80 50" fill="none" aria-hidden="true">
+          <rect x="8" y="10" width="64" height="35" stroke="currentColor" stroke-width="1.5" rx="2"/>
+          <rect x="35" y="28" width="10" height="17" stroke="currentColor" stroke-width="1.5"/>
+          <line x1="40" y1="28" x2="40" y2="45" stroke="currentColor" stroke-width="1" stroke-dasharray="2 2"/>
+          <rect x="14" y="16" width="8" height="8" stroke="currentColor" stroke-width="1"/>
+          <rect x="14" y="27" width="8" height="8" stroke="currentColor" stroke-width="1"/>
+          <rect x="25" y="16" width="8" height="8" stroke="currentColor" stroke-width="1"/>
+          <rect x="25" y="27" width="8" height="8" stroke="currentColor" stroke-width="1"/>
+          <rect x="47" y="16" width="8" height="8" stroke="currentColor" stroke-width="1"/>
+          <rect x="47" y="27" width="8" height="8" stroke="currentColor" stroke-width="1"/>
+          <rect x="58" y="16" width="8" height="8" stroke="currentColor" stroke-width="1"/>
+          <rect x="58" y="27" width="8" height="8" stroke="currentColor" stroke-width="1"/>
+          <line x1="5" y1="10" x2="75" y2="10" stroke="currentColor" stroke-width="1.5"/>
+          <line x1="40" y1="5" x2="40" y2="10" stroke="currentColor" stroke-width="1"/>
+          <polygon points="40,5 50,8 40,11" fill="currentColor"/>
+        </svg>
+        <span class="logo-text">Digital Awareness</span>
+      </a>
+
+      <nav class="nav" role="navigation" aria-label="Main navigation">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="threats.html" class="nav-link">Threats</a></li>
+          <li><a href="password.html" class="nav-link">Password Checker</a></li>
+          <li><a href="quiz.html" class="nav-link active">Quiz</a></li>
+          <li><a href="posters.html" class="nav-link">Posters</a></li>
+        </ul>
+        <button class="mobile-menu-btn" aria-label="Toggle menu" aria-expanded="false">
+          <span class="hamburger"></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" role="main">
+    <!-- Quiz Intro -->
+    <section class="section" aria-labelledby="quiz-title">
+      <div class="container">
+        <div class="quiz-intro" id="quiz-intro">
+          <header class="section-header">
+            <h1 id="quiz-title" class="page-title">Phishing Identification Quiz</h1>
+            <p class="page-subtitle">Test your ability to spot phishing emails. 15 questions, immediate feedback.</p>
+          </header>
+
+          <div class="quiz-stats">
+            <div class="quiz-stat">
+              <span class="quiz-stat-number">15</span>
+              <span class="quiz-stat-label">Questions</span>
+            </div>
+            <div class="quiz-stat">
+              <span class="quiz-stat-number">~5 min</span>
+              <span class="quiz-stat-label">To Complete</span>
+            </div>
+            <div class="quiz-stat">
+              <span class="quiz-stat-number">Instant</span>
+              <span class="quiz-stat-label">Feedback</span>
+            </div>
+          </div>
+
+          <div class="quiz-rules">
+            <h3>How It Works</h3>
+            <ul>
+              <li>You'll be shown 15 email scenarios</li>
+              <li>Decide if each is <strong>Legitimate</strong> or <strong>Phishing</strong></li>
+              <li>Get immediate feedback with detailed explanations</li>
+              <li>Learn why each answer is correct</li>
+              <li>Get your final score and personalized tips</li>
+            </ul>
+          </div>
+
+          <button class="btn btn-primary btn-large" id="start-quiz">Start Quiz →</button>
+        </div>
+
+        <!-- Quiz Questions -->
+        <div class="quiz-area" id="quiz-area" style="display: none;" aria-live="polite">
+          <div class="quiz-progress">
+            <div class="progress-header">
+              <span class="progress-text">Question <span id="current-q">1</span> of <span id="total-q">15</span></span>
+              <span class="progress-score">Score: <span id="current-score">0</span></span>
+            </div>
+            <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+              <div class="progress-fill" id="progress-fill" style="width: 0%"></div>
+            </div>
+          </div>
+
+          <div class="quiz-question-card" id="question-card">
+            <div class="question-header">
+              <span class="question-number" id="question-number">Question 1</span>
+              <span class="question-category" id="question-category"></span>
+            </div>
+
+            <div class="email-scenario" id="email-scenario">
+              <!-- Email content rendered here -->
+            </div>
+
+            <div class="answer-buttons">
+              <button type="button" class="btn btn-lg answer-btn" data-answer="legitimate" id="btn-legitimate">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                  <polyline points="22 4 12 14.01 9 11.01"/>
+                </svg>
+                <span>Legitimate Email</span>
+              </button>
+              <button type="button" class="btn btn-lg btn-outline answer-btn" data-answer="phishing" id="btn-phishing">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <circle cx="12" cy="12" r="10"/>
+                  <line x1="15" y1="9" x2="9" y2="15"/>
+                  <line x1="9" y1="9" x2="15" y2="15"/>
+                </svg>
+                <span>Phishing Attempt</span>
+              </button>
+            </div>
+
+            <div class="feedback-area" id="feedback-area" style="display: none;">
+              <div class="feedback-header">
+                <svg class="feedback-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"></svg>
+                <span class="feedback-title"></span>
+              </div>
+              <p class="feedback-explanation" id="feedback-explanation"></p>
+              <div class="feedback-details" id="feedback-details"></div>
+              <button type="button" class="btn btn-primary" id="next-btn">Next Question →</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Results -->
+        <div class="results-area" id="results-area" style="display: none;">
+          <div class="results-card">
+            <div class="results-header">
+              <div class="results-icon" id="results-icon"></div>
+              <h2 class="results-title" id="results-title">Quiz Complete!</h2>
+              <p class="results-subtitle">Here's how you did</p>
+            </div>
+
+            <div class="results-score">
+              <div class="score-circle">
+                <span class="score-value" id="final-score">0</span>
+                <span class="score-max">/15</span>
+              </div>
+              <div class="score-label" id="score-label">Getting Started</div>
+            </div>
+
+            <div class="score-breakdown">
+              <div class="breakdown-item">
+                <span class="breakdown-label">Correct</span>
+                <span class="breakdown-value correct" id="correct-count">0</span>
+              </div>
+              <div class="breakdown-item">
+                <span class="breakdown-label">Incorrect</span>
+                <span class="breakdown-value incorrect" id="incorrect-count">0</span>
+              </div>
+              <div class="breakdown-item">
+                <span class="breakdown-label">Accuracy</span>
+                <span class="breakdown-value" id="accuracy">0%</span>
+              </div>
+            </div>
+
+            <div class="category-breakdown" id="category-breakdown"></div>
+
+            <div class="results-tips" id="results-tips"></div>
+
+            <div class="results-actions">
+              <button type="button" class="btn btn-primary btn-large" id="retry-btn">Retake Quiz</button>
+              <button type="button" class="btn btn-outline btn-large" id="share-btn">Share Results</button>
+              <a href="threats.html" class="btn btn-secondary btn-large">Learn More About Threats</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quick Tips Reminder -->
+    <section class="section section-alt" aria-labelledby="tips-title">
+      <div class="container">
+        <header class="section-header">
+          <h2 id="tips-title" class="section-title">Remember These Red Flags</h2>
+          <p class="section-subtitle">Quick reference for spotting phishing</p>
+        </header>
+
+        <div class="tips-grid">
+          <article class="tip-card">
+            <div class="tip-icon" aria-hidden="true">🚨</div>
+            <h3>Urgent Language</h3>
+            <p>"Immediate action required", "Account will be closed", "Urgent: verify now"</p>
+          </article>
+
+          <article class="tip-card">
+            <div class="tip-icon" aria-hidden="true">👤</div>
+            <h3>Generic Greetings</h3>
+            <p>"Dear Customer", "Hello User", "Dear Sir/Madam" instead of your name</p>
+          </article>
+
+          <article class="tip-card">
+            <div class="tip-icon" aria-hidden="true">🔗</div>
+            <h3>Suspicious Links</h3>
+            <p>Hover to check real URL. Mismatched domains, URL shorteners, slight misspellings</p>
+          </article>
+
+          <article class="tip-card">
+            <div class="tip-icon" aria-hidden="true">✍️</div>
+            <h3>Poor Grammar/Spelling</h3>
+            <p>Excessive caps, spelling errors, mismatched fonts, unprofessional formatting</p>
+          </article>
+
+          <article class="tip-card">
+            <div class="tip-icon" aria-hidden="true">📎</div>
+            <h3>Unexpected Attachments</h3>
+            <p>.exe, .zip, .scr, .pdf with macros, unexpected invoices or receipts</p>
+          </article>
+
+          <article class="tip-card">
+            <div class="tip-icon" aria-hidden="true">💳</div>
+            <h3>Requests for Personal Info</h3>
+            <p>Legitimate companies never ask for passwords, SSN, or credit cards via email</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section" aria-labelledby="cta-title">
+      <div class="container">
+        <div class="cta-card">
+          <h2 id="cta-title" class="cta-title">Want to Learn More?</h2>
+          <p class="cta-text">Explore the full threat library or test your password strength.</p>
+          <div class="cta-actions">
+            <a href="threats.html" class="btn btn-primary btn-large">Explore Threat Library</a>
+            <a href="password.html" class="btn btn-secondary btn-large">Check Password Strength</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <a href="index.html" class="logo" aria-label="Digital Awareness Home">
+            <svg class="logo-icon" viewBox="0 0 80 50" fill="none" aria-hidden="true">
+              <rect x="8" y="10" width="64" height="35" stroke="currentColor" stroke-width="1.5" rx="2"/>
+              <rect x="35" y="28" width="10" height="17" stroke="currentColor" stroke-width="1.5"/>
+              <line x1="40" y1="28" x2="40" y2="45" stroke="currentColor" stroke-width="1" stroke-dasharray="2 2"/>
+              <rect x="14" y="16" width="8" height="8" stroke="currentColor" stroke-width="1"/>
+              <rect x="14" y="27" width="8" height="8" stroke="currentColor" stroke-width="1"/>
+              <rect x="25" y="16" width="8" height="8" stroke="currentColor" stroke-width="1"/>
+              <rect x="25" y="27" width="8" height="8" stroke="currentColor" stroke-width="1"/>
+              <rect x="47" y="16" width="8" height="8" stroke="currentColor" stroke-width="1"/>
+              <rect x="47" y="27" width="8" height="8" stroke="currentColor" stroke-width="1"/>
+              <rect x="58" y="16" width="8" height="8" stroke="currentColor" stroke-width="1"/>
+              <rect x="58" y="27" width="8" height="8" stroke="currentColor" stroke-width="1"/>
+              <line x1="5" y1="10" x2="75" y2="10" stroke="currentColor" stroke-width="1.5"/>
+              <line x1="40" y1="5" x2="40" y2="10" stroke="currentColor" stroke-width="1"/>
+              <polygon points="40,5 50,8 40,11" fill="currentColor"/>
+            </svg>
+            <span class="logo-text">Digital Awareness</span>
+          </a>
+          <p class="footer-tagline">Part of Future Mall Capstone Project</p>
+        </div>
+
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <a href="index.html">Home</a>
+          <a href="threats.html">Threats</a>
+          <a href="password.html">Password Checker</a>
+          <a href="quiz.html">Quiz</a>
+          <a href="posters.html">Posters</a>
+        </nav>
+
+        <p class="footer-copyright">
+          © 2025 Future Mall Capstone Project. Educational use only.
+        </p>
+      </div>
+    </footer>
+
+  <script src="quiz.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

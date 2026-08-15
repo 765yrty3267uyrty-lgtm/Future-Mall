@@ -1,0 +1,28 @@
+{
+  "name": "future-mall-website",
+  "version": "1.0.0",
+  "description": "Future Mall - Capstone Project Website",
+  "private": true,
+  "scripts": {
+    "dev": "npx serve .",
+    "test": "echo \"No tests specified\" && exit 0",
+    "lint": "npx stylelint style.css"
+  },
+  "keywords": [
+    "future-mall",
+    "capstone",
+    "portfolio"
+  ],
+  "author": "Future Mall Team",
+  "license": "MIT",
+  "devDependencies": {
+    "serve": "^14.2.0",
+    "stylelint": "^16.0.0",
+    "stylelint-config-standard": "^36.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}
